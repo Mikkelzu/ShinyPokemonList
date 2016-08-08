@@ -18,7 +18,7 @@ namespace ShinyPokemonList
 
         public static string AddPokemon(string name, string gender, int OTID, string OTName)
         {
-            return $"INSERT INTO pokemon (name, gender, OTID, OTName) VALUES ('{name}', {gender}, {OTID} ,{OTName})";
+            return $"INSERT INTO pokemon (name, gender, OTID, OTName) VALUES ('{name}', '{gender}', {OTID} ,'{OTName}')";
         }
 
         public static string DeletePokemon(int otid)

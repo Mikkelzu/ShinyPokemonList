@@ -24,12 +24,20 @@ namespace ShinyPokemonList
         public AddWindow()
         {
             InitializeComponent();
+
+            string male = "Male";
+            string female = "Female";
+            string none = "Genderless";
+
+            string[] genders = new string[] { male, female, none };
+
+            comboBox.ItemsSource = genders;
         }
 
         private async void btnDone_Click(object sender, RoutedEventArgs e)
         {
             string name = txtName.Text;
-            string gender = txtGender.Text;
+            string gender = comboBox.SelectedItem.ToString();
             int otid = Convert.ToInt32(txtOTID.Text);
             string otname = txtOTName.Text;
 
