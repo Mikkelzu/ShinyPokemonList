@@ -25,27 +25,39 @@ namespace ShinyPokemonList
         {
             InitializeComponent();
 
-            string male = "Male";
-            string female = "Female";
-            string none = "Genderless";
-
-            string[] genders = new string[] { male, female, none };
+            string[] genders = new string[] { Globals.male, Globals.female, Globals.none };
 
             comboBox.ItemsSource = genders;
+
+            Pokemon.Init();
+            FillPokemonList();
+        }
+
+        public void FillPokemonList()
+        {
+            foreach (var pok in Pokemon.pokemonList)
+            {
+                comboBoxPokemon.Items.Add(pok);
+            }
         }
 
         private async void btnDone_Click(object sender, RoutedEventArgs e)
         {
-            string name = txtName.Text;
+            string name = comboBoxPokemon.SelectedItem.ToString();
             string gender = comboBox.SelectedItem.ToString();
             int otid = Convert.ToInt32(txtOTID.Text);
             string otname = txtOTName.Text;
 
             AddPoke.AddPokemon(name, gender, otid, otname);
 
-            await this.ShowMessageAsync("Completed", $"Succesfully added your {txtName.Text}");
+            await this.ShowMessageAsync("Completed", $"Succesfully added your {name}");
 
             Close();
+        }
+
+        private void comboBoxPokemon_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            image.Source = GetSprite.GetShinySprite(comboBoxPokemon.SelectedItem.ToString());
         }
     }
 }

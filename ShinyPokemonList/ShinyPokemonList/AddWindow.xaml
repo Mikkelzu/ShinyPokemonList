@@ -8,11 +8,12 @@
         mc:Ignorable="d"
         Title="Add new" Height="300" Width="300">
     <Grid>
-        <TextBox Controls:TextBoxHelper.Watermark="Name" x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="10,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox Controls:TextBoxHelper.Watermark="OT ID" x:Name="txtOTID" HorizontalAlignment="Left" Height="23" Margin="10,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox Controls:TextBoxHelper.Watermark="OT Name" x:Name="txtOTName" HorizontalAlignment="Left" Height="23" Margin="10,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
         <Button x:Name="btnDone" Content="Add" HorizontalAlignment="Left" Margin="207,235,0,0" VerticalAlignment="Top" Width="75" Click="btnDone_Click"/>
         <ComboBox Controls:TextBoxHelper.Watermark="Gender"  x:Name="comboBox" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Controls:TextBoxHelper.Watermark="Name"  x:Name="comboBoxPokemon" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBoxPokemon_SelectionChanged"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="163,38,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Controls:MetroWindow>

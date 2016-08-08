@@ -92,6 +92,9 @@
     </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="DeletePokemon.cs" />
+    <Compile Include="GetSprite.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Pokemon.cs" />
     <Compile Include="Queries.cs" />
     <Page Include="AddWindow.xaml">
       <SubType>Designer</SubType>

@@ -28,6 +28,7 @@ namespace ShinyPokemonList
             InitializeComponent();
 
             new Task(ShowDatabaseInGrid).Start();
+            
         }
         public async void ShowDatabaseInGrid()
         {
@@ -75,6 +76,22 @@ namespace ShinyPokemonList
                 dataGrid.ItemsSource = null;
                 new Task(ShowDatabaseInGrid).Start();
             }
+        }
+
+        private async void button_Click(object sender, RoutedEventArgs e)
+        {
+            object item = dataGrid.SelectedItem;
+
+            if (item == null)
+            {
+                shinyimage.Source = GetSprite.NoImageFound();
+            }
+            else
+            {
+                string name = (dataGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+                shinyimage.Source = GetSprite.GetShinySprite(name);
+            }
+            
         }
     }
 }
