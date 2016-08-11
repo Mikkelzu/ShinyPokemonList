@@ -19,5 +19,10 @@
         {
             return $"DELETE FROM pokemon WHERE OTID = '{otid}'";
         }
+
+        public static string EditPokemon(string name, string gender, int OTID, string OTName)
+        {
+            return $"UPDATE pokemon SET name='{name}', gender='{gender}', OTID='{OTID}', OTName='{OTName}' WHERE name='{name}' AND OTID='{OTID}'";
+        }
     }
 }

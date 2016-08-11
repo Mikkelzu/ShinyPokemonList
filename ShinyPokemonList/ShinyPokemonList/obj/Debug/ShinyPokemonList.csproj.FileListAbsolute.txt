@@ -27,3 +27,5 @@ C:\Users\Michael\Documents\GitHub\ShinyPokemonList\ShinyPokemonList\ShinyPokemon
 C:\Users\Michael\Documents\GitHub\ShinyPokemonList\ShinyPokemonList\ShinyPokemonList\bin\Debug\System.Data.SQLite.xml
 C:\Users\Michael\Documents\GitHub\ShinyPokemonList\ShinyPokemonList\ShinyPokemonList\obj\Debug\AddWindow.g.cs
 C:\Users\Michael\Documents\GitHub\ShinyPokemonList\ShinyPokemonList\ShinyPokemonList\obj\Debug\AddWindow.baml
+C:\Users\Michael\Documents\GitHub\ShinyPokemonList\ShinyPokemonList\ShinyPokemonList\obj\Debug\EditWindow.g.cs
+C:\Users\Michael\Documents\GitHub\ShinyPokemonList\ShinyPokemonList\ShinyPokemonList\obj\Debug\EditWindow.baml

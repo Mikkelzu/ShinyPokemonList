@@ -8,13 +8,14 @@
         mc:Ignorable="d"
         Title="Home" Height="350" Width="497.923">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="130" Width="344"  >
-            
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="240" Width="344"  >
+
         </DataGrid>
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="33,180,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click" Height="25"/>
-        <Button x:Name="btnAdd" Content="Add New" HorizontalAlignment="Left" Margin="186,180,0,0" VerticalAlignment="Top" Width="86" Click="btnAdd_Click" Height="25"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="339,180,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click" Height="25"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="14,285,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click" Height="25"/>
+        <Button x:Name="btnAdd" Content="Add New" HorizontalAlignment="Left" Margin="94,285,0,0" VerticalAlignment="Top" Width="86" Click="btnAdd_Click" Height="25"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="390,285,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click" Height="25"/>
         <Image x:Name="shinyimage" HorizontalAlignment="Left" Height="96" Margin="369,28,0,0" VerticalAlignment="Top" Width="96"/>
         <Button x:Name="button" Content="Show The Sprite" HorizontalAlignment="Left" Margin="369,129,0,0" VerticalAlignment="Top" Width="98" Click="button_Click"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="296,285,0,0" VerticalAlignment="Top" Width="75" Click="btnEdit_Click"/>
     </Grid>
 </Controls:MetroWindow>

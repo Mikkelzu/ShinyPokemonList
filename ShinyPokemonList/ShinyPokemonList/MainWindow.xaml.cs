@@ -28,7 +28,7 @@ namespace ShinyPokemonList
             InitializeComponent();
 
             new Task(ShowDatabaseInGrid).Start();
-            
+
         }
         public async void ShowDatabaseInGrid()
         {
@@ -78,7 +78,7 @@ namespace ShinyPokemonList
             }
         }
 
-        private async void button_Click(object sender, RoutedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
             object item = dataGrid.SelectedItem;
 
@@ -91,7 +91,27 @@ namespace ShinyPokemonList
                 string name = (dataGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
                 shinyimage.Source = GetSprite.GetShinySprite(name);
             }
-            
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            object item = dataGrid.SelectedItem;
+
+            string name = (dataGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+            string gender = (dataGrid.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
+            string otid = (dataGrid.SelectedCells[2].Column.GetCellContent(item) as TextBlock).Text;
+            string otname = (dataGrid.SelectedCells[3].Column.GetCellContent(item) as TextBlock).Text;
+
+            if (item == null)
+            {
+                Console.WriteLine("sssssss");
+            }
+            else
+            {
+                EditWindow ed = new EditWindow(name, gender, otid, otname, this);
+                ed.Show();
+            }
         }
     }
 }
