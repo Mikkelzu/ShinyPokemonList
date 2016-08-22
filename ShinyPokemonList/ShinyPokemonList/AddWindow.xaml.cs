@@ -29,7 +29,7 @@ namespace ShinyPokemonList
 
             comboBox.ItemsSource = genders;
 
-            Pokemon.Init();
+            Pokemon.Initialize.Init();
             FillPokemonList();
         }
 

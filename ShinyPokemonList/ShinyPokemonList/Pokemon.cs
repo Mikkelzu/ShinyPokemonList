@@ -8,36 +8,40 @@ namespace ShinyPokemonList
     {
         public static List<Pokemon> pokemonList = new List<Pokemon>();
         private int id_ = 0;
-        public static void Init()
+        internal class Initialize
         {
-            try
+            public static void Init()
             {
-                var path = Directory.GetCurrentDirectory();
-                using (var sr = new StreamReader(path+"/pokemondata.txt"))
+                try
                 {
-                    var line = "";
-                    while ((line = sr.ReadLine()) != null)
+                    var path = Directory.GetCurrentDirectory();
+                    using (var sr = new StreamReader(path + "/pokemondata.txt"))
                     {
-                        string[] spl = line.Split(';');
-                        if (spl.Length == 8)
+                        var line = "";
+                        while ((line = sr.ReadLine()) != null)
                         {
-                            try
+                            string[] spl = line.Split(';');
+                            if (spl.Length == 8)
                             {
-                                new Pokemon(Convert.ToInt32(spl[0]), spl[1]);
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
+                                try
+                                {
+                                    new Pokemon(Convert.ToInt32(spl[0]), spl[1]);
+                                }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine(ex.Message);
+                                }
                             }
                         }
                     }
-                }
 
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+
         }
 
         public Pokemon(int id, string name)

@@ -96,6 +96,7 @@
     <Compile Include="EditWindow.xaml.cs">
       <DependentUpon>EditWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Genders.cs" />
     <Compile Include="GetSprite.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Pokemon.cs" />

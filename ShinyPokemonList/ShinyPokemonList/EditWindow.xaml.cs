@@ -23,7 +23,7 @@ namespace ShinyPokemonList
         public EditWindow(string pokemon, string gender, string otid, string otname, MainWindow main)
         {
             InitializeComponent();
-            Pokemon.Init();
+            Pokemon.Initialize.Init();
             FillPokemonList();
 
             string[] genders = new string[] { Globals.male, Globals.female, Globals.none };
